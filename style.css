@@ -7,3 +7,31 @@
  Template:       spine
  Version:        0.0.1
 */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3227938, 2016-06-03T12:42:07-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Manus by JOEBOB graphics
+ * URL: http://www.myfonts.com/fonts/joebob/manus/regular/
+ * Copyright: &#x00A9; 2014 GEERT
+ * Licensed pageviews: 1,000,000
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3227938
+ *
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/314122");
+
+
+@font-face {font-family: 'Manus';src: url('webfonts/314122_0_0.eot');src: url('webfonts/314122_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/314122_0_0.woff2') format('woff2'),url('webfonts/314122_0_0.woff') format('woff'),url('webfonts/314122_0_0.ttf') format('truetype');}
