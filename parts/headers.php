@@ -1,4 +1,5 @@
 <nav>
+  <a name="hamburger" class="hamburger">menu</a>
     <ul>
       <li><a href="#academics">Academics</a></li>
       <li><a href="#cougspirit">Coug Spirit</a></li>
