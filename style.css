@@ -36,17 +36,25 @@
 
 @font-face {font-family: 'Manus';src: url('webfonts/314122_0_0.eot');src: url('webfonts/314122_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/314122_0_0.woff2') format('woff2'),url('webfonts/314122_0_0.woff') format('woff'),url('webfonts/314122_0_0.ttf') format('truetype');}
 
-.icon-wrap .icon:hover .svg-path-arc {
-  stroke-dasharray: 1000;
-stroke-dashoffset: 1000;
-	animation: dash 5s linear forwards;
+.icon .svg-path-arc {
+  fill:none;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
 }
-
+.icon:hover .svg-path-arc {
+  stroke-dasharray: 772;
+  stroke-dashoffset: 772;
+  animation: dash 1s linear forwards;
+}
 @keyframes dash {
   from {
-    stroke-dashoffset: 1000;
+
+    stroke:#fff;
   }
   to {
+
     stroke-dashoffset: 0;
+    stroke:#981e32;
   }
 }
