@@ -35,7 +35,10 @@
 
 
 @font-face {font-family: 'Manus';src: url('webfonts/314122_0_0.eot');src: url('webfonts/314122_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/314122_0_0.woff2') format('woff2'),url('webfonts/314122_0_0.woff') format('woff'),url('webfonts/314122_0_0.ttf') format('truetype');}
+
 .icon-wrap .icon:hover .svg-path {
+  stroke-dasharray: 1000;
+stroke-dashoffset: 1000;
 	animation: dash 5s linear forwards;
 }
 
