@@ -58,3 +58,6 @@
     stroke:#981e32;
   }
 }
+.blend-mode {
+  background-blend-mode: multiply;
+}
