@@ -35,19 +35,15 @@
 
 
 @font-face {font-family: 'Manus';src: url('webfonts/314122_0_0.eot');src: url('webfonts/314122_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/314122_0_0.woff2') format('woff2'),url('webfonts/314122_0_0.woff') format('woff'),url('webfonts/314122_0_0.ttf') format('truetype');}
-.icon-wrap a:hover,
-.icon-wrap .icon:hover .cls-1,
-.icon-wrap .icon:hover h3 {
-	fill: #981e32;
-	color: #981e32;
-	cursor: pointer;
+.icon-wrap .icon:hover .cls-1 {
 	animation: dash 5s linear forwards;
 }
 
 @keyframes dash {
-	from {
-	}
-
-	to {
-	}
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
