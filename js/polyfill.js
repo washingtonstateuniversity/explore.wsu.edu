@@ -41,5 +41,3 @@ function createBlendedBackgroundImageFromURLAndColor(url, color, callback) {
     callback(data);
   };
 }
-var path = document.querySelector('.cls-1');
-var length = path.getTotalLength();
