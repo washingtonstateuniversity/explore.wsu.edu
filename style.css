@@ -61,3 +61,149 @@
 .blend-mode {
   background-blend-mode: multiply;
 }
+
+/* Carousel */
+.column.carousel {
+  overflow: hidden;
+}
+
+.carousel-container {
+  margin: 0 auto;
+  position: relative;
+  width: calc(100% / 3);
+}
+
+.carousel-items {
+  font-size: 0;
+  left: -200%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.column.carousel .carousel-items figure {
+  max-width: none;
+}
+
+.carousel-items figure {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel.ready .carousel-items figure {
+  transition: margin .5s, padding-bottom .5s, width .5s, z-index .5s;
+}
+
+.carousel-items [aria-hidden="false"] {
+  margin: 0 -1rem;
+  padding-bottom: calc(100% + 1rem);
+  width: calc(100% + 2rem);
+  z-index: 2;
+}
+
+.carousel-items figure img {
+  position: absolute;
+  width: 100%;
+}
+
+.carousel-items figcaption {
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0;
+  padding: 2.5rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: normal;
+  width: 100%;
+}
+
+.carousel.ready .carousel-items figcaption {
+  transition: opacity .5s;
+}
+
+.carousel-items [aria-hidden="false"] figcaption {
+  opacity: 1;
+}
+
+.controls {
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  font-size: 0;
+  height: 0;
+  margin-top: -2.25rem;
+  padding: 2.25rem;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 3;
+}
+
+.controls:active,
+.controls:focus,
+.controls:hover {
+  background: transparent;
+  outline: none;
+}
+
+.controls:before,
+.controls:after {
+  border-radius: inherit;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.controls:before {
+  content: ' ';
+  background: url(http://wp.wsu.dev/wp-content/uploads/sites/1/2016/07/slider-button-bg.png) center no-repeat;
+  background-size: 98%;
+}
+
+.controls:after {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 4rem;
+}
+
+.controls:hover:after {
+  color: #981e32;
+}
+
+.prev {
+  left: -3rem;
+}
+
+.prev:before {
+  -moz-transform: scale(-1);
+  -o-transform: scale(-1);
+  -webkit-transform: scale(-1);
+  transform: scale(-1);
+  filter: Flip;
+  -ms-filter: Flip;
+}
+
+.prev:after {
+  content: '\003c';
+}
+
+.next {
+  right: -3rem;
+}
+
+.next:after {
+  content: '\003e';
+}
