@@ -168,7 +168,7 @@
 
 .controls:before {
   content: ' ';
-  background: url(http://wp.wsu.dev/wp-content/uploads/sites/1/2016/07/slider-button-bg.png) center no-repeat;
+  background: url(assets/slider-button-bg.png) center no-repeat;
   background-size: 98%;
 }
 
