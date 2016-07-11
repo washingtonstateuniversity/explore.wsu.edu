@@ -64,6 +64,7 @@
 
 /* Carousel */
 .column.carousel {
+  margin: -1rem 0 -2rem 0;
   overflow: hidden;
 }
 
@@ -91,8 +92,9 @@
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
-  padding-bottom: 100%;
-  margin-top: 1rem;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  margin: 1rem 0;
   position: relative;
   z-index: 1;
 }
@@ -103,12 +105,13 @@
 
 .carousel-items [aria-hidden="false"] {
   margin: 0 -1rem;
-  padding-bottom: calc(100% + 1rem);
+  padding-bottom: calc(56.25% + 2rem);
   width: calc(100% + 2rem);
   z-index: 2;
 }
 
 .carousel-items figure img {
+  left: 0;
   position: absolute;
   width: 100%;
 }
@@ -116,23 +119,19 @@
 .carousel-items figcaption {
   box-sizing: border-box;
   color: #fff;
-  font-size: 1.2rem;
-  opacity: 0;
-  padding: 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  left: 0;
+  margin: 0 auto;
+  padding: 2rem;
   position: absolute;
+  right: 0;
   text-align: center;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   white-space: normal;
-  width: 100%;
-}
-
-.carousel.ready .carousel-items figcaption {
-  transition: opacity .5s;
-}
-
-.carousel-items [aria-hidden="false"] figcaption {
-  opacity: 1;
+  width: 80%;
+  background-color: rgba(0,0,0,.3);
 }
 
 .controls {
