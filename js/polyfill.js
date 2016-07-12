@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function createBlendedBackgrounds() {
-  var els = document.querySelectorAll('.blend-multiply', '.blend-multiply:before');
+  var els = document.querySelectorAll('.blend-mode', '.blend-mode:before');
   for(var i = 0; i < els.length; i++) {
     var el = els[i];
     processElement(el);

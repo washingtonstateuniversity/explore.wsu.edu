@@ -29,40 +29,22 @@
  * © 2016 MyFonts Inc
 */
 
-
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/314122");
-
-
 @font-face {font-family: 'Manus';src: url('webfonts/314122_0_0.eot');src: url('webfonts/314122_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/314122_0_0.woff2') format('woff2'),url('webfonts/314122_0_0.woff') format('woff'),url('webfonts/314122_0_0.ttf') format('truetype');}
+/****
+# End font face
+****/
 
-.icon .svg-path-arc {
-  fill:none;
-  stroke-width:4;
-  stroke-linecap:round;
-  stroke-miterlimit:10;
-}
-.icon:hover .svg-path-arc {
-  stroke-dasharray: 772;
-  stroke-dashoffset: 772;
-  animation: dash 1s linear forwards;
-}
-@keyframes dash {
-  from {
-
-    stroke:#fff;
-  }
-  to {
-
-    stroke-dashoffset: 0;
-    stroke:#981e32;
-  }
-}
+/****
+# blend mode (Because edit css doesn't reconize it)
+****/
 .blend-mode {
   background-blend-mode: multiply;
 }
-
-/* Carousel */
+/****
+# carousel
+****/
 .column.carousel {
   margin: -1rem 0 -2rem 0;
   overflow: hidden;
@@ -102,21 +84,23 @@
 .carousel.ready .carousel-items figure {
   transition: margin .5s, padding-bottom .5s, width .5s, z-index .5s;
 }
-
+.carousel.ready .carousel-items figcaption {
+	transition: opacity .5s;
+}
 .carousel-items [aria-hidden="false"] {
   margin: 0 -1rem;
   padding-bottom: calc(56.25% + 2rem);
   width: calc(100% + 2rem);
   z-index: 2;
+	opacity: 1;
 }
-
 .carousel-items figure img {
   left: 0;
   position: absolute;
   width: 100%;
 }
-
 .carousel-items figcaption {
+		opacity: 0;
   box-sizing: border-box;
   color: #fff;
   font-size: 1.1rem;
@@ -127,7 +111,7 @@
   position: absolute;
   right: 0;
   text-align: center;
-  top: 35%;
+  top: 50%;
   transform: translateY(-50%);
   white-space: normal;
   width: 80%;
@@ -167,7 +151,7 @@
 
 .controls:before {
   content: ' ';
-  background: url(assets/slider-button-bg.png) center no-repeat;
+  background: url('assets/slider-button-bg.png') center no-repeat;
   background-size: 98%;
 }
 
@@ -198,11 +182,9 @@
 .prev:after {
   content: '\003c';
 }
-
 .next {
   right: -3rem;
 }
-
 .next:after {
   content: '\003e';
 }
