@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.1
+ Version:        0.0.20
 */
 
 /**
@@ -93,6 +93,9 @@
   width: calc(100% + 2rem);
   z-index: 2;
 	opacity: 1;
+}
+.carousel-items [aria-hidden="false"] figcaption {
+  opacity:1;
 }
 .carousel-items figure img {
   left: 0;
