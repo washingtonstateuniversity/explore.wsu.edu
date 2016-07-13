@@ -1,9 +1,13 @@
-/* Hamburger menu */
-(function($) {
-	$('.hamburger').click(function(){
-		$('a.hamburger').toggleClass('menu-open');
+(function ($) {
+	'use strict';
+
+	// Toggle menu
+	$('.hamburger').click(function () {
+		$('.hamburger').toggleClass('menu-open');
 	});
-	$('.site-nav').on('click', 'a', function() {
+
+	// Navigation item click handling (scroll, toggle menu)
+	$('.site-nav').on('click', 'a', function () {
 		var target = $(this.hash),
 			burger = $(this).closest('ul').prev('.hamburger');
 
@@ -15,33 +19,11 @@
 			return false;
 		}
 	});
+
+	// JS Reveal
+	window.sr = ScrollReveal();
+	if (sr.isSupported()) {
+		document.documentElement.classList.add('sr');
+	}
+	sr.reveal('.icon-wrap');
 }(jQuery));
-
-(function($,window) {
-	var check_sticky = function() {
-		var $sticky_images = $('.stick-image');
-		$sticky_images.each(function(){
-			var $this = $(this);
-			var dist = $this.offset().top - $(window).scrollTop();
-
-			if ( dist <= 0 && ! $this.hasClass('sticky') ) {
-				$this.addClass('sticky');
-			}
-
-			if ( dist > 0 && $this.hasClass('sticky') ) {
-				$this.removeClass('sticky');
-			}
-		});
-	};
-
-	$(window).on("load scroll resize", check_sticky );
-}(jQuery,window));
-
-/* JS Reveal */
-window.sr = ScrollReveal();
-
-// Add class to <html> if ScrollReveal is supported
-if (sr.isSupported()) {
-	document.documentElement.classList.add('sr');
-}
-sr.reveal('.icon-wrap');
