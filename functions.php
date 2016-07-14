@@ -3,8 +3,6 @@
 add_action( 'wp_enqueue_scripts', 'wsu_exlpore_enque_scripts');
 
 function wsu_exlpore_enque_scripts(){
-	wp_enqueue_script( 'wsu-explore-polyfill', get_stylesheet_directory_uri() . '/js/polyfill.js', array( 'jquery' ), spine_get_script_version(), false );
-	wp_enqueue_script( 'wsu-explore-carousel', get_stylesheet_directory_uri() . '/js/carousel.js', array( 'jquery' ), spine_get_script_version(), true );
 	wp_enqueue_script( 'wsu-explore-scroll', get_stylesheet_directory_uri() . '/js/scrollreveal.min.js', array( 'jquery' ), spine_get_script_version(), false );
 	wp_enqueue_script( 'wsu-explore-window', get_stylesheet_directory_uri() . '/js/window.js', array( 'jquery' ), spine_get_script_version(), true );
 }
