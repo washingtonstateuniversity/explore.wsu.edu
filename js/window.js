@@ -22,10 +22,24 @@
 
 	// JS Reveal
 	window.sr = ScrollReveal();
+
 	if (sr.isSupported()) {
 		document.documentElement.classList.add('sr');
 	}
-	sr.reveal('.icon-wrap', { viewFactor: 1 });
+
+	var sr_viewFactor = $(window).width() > 899 ? 0.9 : 0.3;
+
+	sr.reveal('.icon-wrap', {
+		viewFactor: sr_viewFactor,
+		mobile: false,
+	});
+
+	sr.reveal('.explore .icon-wrap', {
+		move: 0,
+		scale: { power: 0 },
+		opacity: 1,
+		viewFactor: 0,
+	});
 
 	// Flag browsers that don't support background-blend-mode
 	document.addEventListener('DOMContentLoaded', function() {
