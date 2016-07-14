@@ -25,7 +25,7 @@
 	if (sr.isSupported()) {
 		document.documentElement.classList.add('sr');
 	}
-	sr.reveal('.icon-wrap');
+	sr.reveal('.icon-wrap', { viewFactor: 1 });
 
 	// Flag browsers that don't support background-blend-mode
 	document.addEventListener('DOMContentLoaded', function() {
@@ -54,6 +54,14 @@
 	// Remove 'class' and 'style' attributes from the items to avoid style conflicts,
 	// and remove the 'id' attribute because these elements may be cloned below.
 	$('.carousel-items figure').removeAttr('id class style').attr('aria-hidden', 'true');
+
+	// Set images as backgrounds on figures.
+	$('.carousel-items').find('figure').each(function () {
+		var figure = $(this),
+			image = figure.children('img').attr('src');
+
+		figure.css('background-image', 'url(' + image + ')');
+	});
 
 	// Because at least five items are required in order to achieve the 'inifite' effect,
 	// clone and append them as needed if there are fewer than that.

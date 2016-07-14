@@ -72,11 +72,13 @@
 }
 
 .carousel-items figure {
+  background: center no-repeat;
+  background-size: cover;
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 60%;
+  padding-bottom: 75%;
   margin: 1rem 0;
   position: relative;
   z-index: 1;
@@ -88,16 +90,14 @@
 
 .carousel-items [aria-hidden="false"] {
   margin: 0 -1rem;
-  padding-bottom: calc(60% + 2rem);
+  padding-bottom: calc(75% + 2rem);
   width: calc(100% + 2rem);
   z-index: 2;
 	opacity: 1;
 }
 
 .carousel-items figure img {
-  left: 0;
-  position: absolute;
-  width: 100%;
+  display: none;
 }
 
 .carousel-items figcaption {
