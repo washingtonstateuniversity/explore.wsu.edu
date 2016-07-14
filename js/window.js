@@ -26,4 +26,12 @@
 		document.documentElement.classList.add('sr');
 	}
 	sr.reveal('.icon-wrap');
+
+	// Flag browsers that don't support background-blend-mode
+	document.addEventListener('DOMContentLoaded', function() {
+		var supportsBackgroundBlendMode = window.getComputedStyle(document.body).backgroundBlendMode;
+		if(typeof supportsBackgroundBlendMode == 'undefined') {
+			document.documentElement.classList.add('no-bbm');
+		}
+	}, false);
 }(jQuery));
