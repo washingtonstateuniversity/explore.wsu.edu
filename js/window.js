@@ -55,6 +55,14 @@
 	// and remove the 'id' attribute because these elements may be cloned below.
 	$('.carousel-items figure').removeAttr('id class style').attr('aria-hidden', 'true');
 
+	// Set images as backgrounds on figures.
+	$('.carousel-items').find('figure').each(function () {
+		var figure = $(this),
+			image = figure.children('img').attr('src');
+
+		figure.css('background-image', 'url(' + image + ')');
+	});
+
 	// Because at least five items are required in order to achieve the 'inifite' effect,
 	// clone and append them as needed if there are fewer than that.
 	if (4 >= item_count) {
