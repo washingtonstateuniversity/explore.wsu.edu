@@ -25,7 +25,7 @@
 	if (sr.isSupported()) {
 		document.documentElement.classList.add('sr');
 	}
-	sr.reveal('.icon-wrap');
+	sr.reveal('.icon-wrap', { viewFactor: 0.75 });
 
 	// Flag browsers that don't support background-blend-mode
 	document.addEventListener('DOMContentLoaded', function() {
